@@ -20,38 +20,41 @@ Following are a few details concerning the program, setup, and usage (not intend
 In the following, 'root directory' means the addingcards/ directory.
 
 ###General Setup
-Bower modules for the main application can be downloaded from the root directory:
+####Pre-requisites
+* nodejs and npm installed.
+* An http server of some kind. A simple option is to use the nodejs http-server.
+####The Program
+To use, the following steps or equivalent are required:
+Get the source code:
+```
+git clone https://github.com/hombredequeso/AddingCards
+cd AddingCards
+```
+Use npm to get various dependencies
+```
+npm install
+```
+Use bower to get the javascript dependencies
 ```
 bower install
 ```
-
-Bower modules for the testing can be downloaded from addingcards/test directory:
-```
-bower install
-```
-
-###TESTING
-In the root directory:
-```
-karma start
-```
-
-###BUILDING
-In the root directory:
-```
-gulp
-```
-
-###RUNNING
-To run use an http server to serve up either the src directory (for debug), or the dist directory (for prod, after building).
-For example, if the nodejs http-server module is installed, from the root directory:
-
+At this point, it is possible to run the debug version
 ```
 http-server src
 ```
-
-or
+Or use gulp to compile and then run the release verson
 ```
+gulp
 http-server dist
 ```
-
+####Testing
+Use bower to get test javascript dependencies
+```
+cd test
+bower install
+cd ..
+```
+Run the tests using karma
+```
+karma start
+```
