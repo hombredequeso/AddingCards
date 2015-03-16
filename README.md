@@ -17,12 +17,11 @@ Although not really a single-page-application worthy application, this was used 
 It also uses many of the usual web/javascript development suspects along the way: nodejs, gulp, karma, bower.
 
 Following are a few details concerning the program, setup, and usage (not intended to be comprehensive).
-In the following, 'root directory' means the addingcards/ directory.
 
-###General Setup
 ####Pre-requisites
 * nodejs and npm installed.
 * An http server of some kind. A simple option is to use the nodejs http-server.
+
 ####The Program
 To use, the following steps or equivalent are required:
 Get the source code:
@@ -47,6 +46,7 @@ Or use gulp to compile and then run the release verson
 gulp
 http-server dist
 ```
+
 ####Testing
 Use bower to get test javascript dependencies
 ```
