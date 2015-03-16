@@ -1,0 +1,46 @@
+<h2>Game Simulator</h2>
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Card</td>
+                    <td>Value</td>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:rankValues">
+            <tr>
+                <td  data-bind="text: rank"></td>
+                <td><input data-bind="value: value"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p>Games to play: <input data-bind="value: iterations" /></p>
+<p>Winning value: <input data-bind="value: targetCount" /></p>
+
+<button class="btn btn-lg btn-default" data-bind='click: play'>Play</button>
+
+<h2>Results</h2>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tbody>
+            <tr>
+                <td><span><b>Cards Played:</b></span></td>
+                <!-- ko foreach: cardsPlayed -->
+                <td data-bind="text: cardCount"></td>
+                <!-- /ko -->
+            </tr>
+            <tr>
+                <td><span><b>Game Count:</b></span></td>
+                <!-- ko foreach: cardsPlayed -->
+                <td data-bind="text: gameCount"></td>
+                <!-- /ko -->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
